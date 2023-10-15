@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['bsimpan'])){
-        if($_GET['hal'] == "edit"){
+        if(@$_GET['hal'] == "edit"){
           $ubah = mysqli_query($koneksi, "UPDATE tbl_fakultas SET nama_fakultas = '$_POST[nama_fakultas]'
           where id_fakultas ='$_GET[id]'");
           if($ubah){
